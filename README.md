@@ -7,15 +7,20 @@ Sito vetrina della dott.ssa Graziella Viganò, medico veterinario omeopata. HTML
 ```
 index.html                         Home: chi sono, servizi, contatti segreteria
 biofeedback/index.html             Biofeedback quantistico
-inquinamento-elettromagnetico/     Inquinamento elettromagnetico (videocorso in preparazione)
+inquinamento-elettromagnetico/     Inquinamento elettromagnetico: consulenza e videocorso in preparazione
 privacy/index.html                 Informativa privacy
 404.html                           Pagina non trovata
 assets/css/style.css               Unico foglio di stile (token colore in cima)
 assets/js/main.js                  Menu mobile e anno nel footer
-assets/img/                        Logo vettoriale, foto, sprite icone, immagine di condivisione
+assets/img/                        Logo vettoriale (scuro e chiaro) e sprite icone
+assets/foto/                       Ritratto (WebP e JPG, 480 e 800 px) e immagine di condivisione
 assets/fonts/                      Newsreader (titoli) e Atkinson Hyperlegible Next (testo), ospitati in locale
 CNAME                              Dominio personalizzato per GitHub Pages
 ```
+
+## Materiali originali
+
+I file sorgente (foto originali, biglietto da visita, documenti Word dei testi) sono nella cartella `../materiali/`, fuori dal sito, così non vengono pubblicati.
 
 ## Modifiche frequenti
 
