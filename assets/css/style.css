@@ -35,6 +35,7 @@
   --paper-2: #eef3fb;
   --line: #d4dbe8;
   --on-blue: #f7faff;
+  --green: #2f7a3f;
 
   --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
   --font-body: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, sans-serif;
@@ -144,7 +145,7 @@ em { font-style: italic; }
 .site-header .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: 4.5rem; }
 .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: var(--ink); margin-right: auto; }
 .brand img { width: 2.6rem; height: 2.6rem; }
-.brand-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; letter-spacing: -0.01em; line-height: 1; }
+.brand-name { font-family: var(--font-display); font-size: 1.4rem; font-weight: 500; letter-spacing: -0.01em; line-height: 1; color: var(--green); }
 .brand-name b { font-weight: 700; color: var(--blue); }
 .nav ul { list-style: none; display: flex; gap: 1.6rem; margin: 0; padding: 0; }
 .nav a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: var(--step--1); padding: 0.4rem 0; border-bottom: 2px solid transparent; }
@@ -253,8 +254,8 @@ em { font-style: italic; }
 
 /* Servizi */
 .services-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 3rem; margin-bottom: 3rem; }
-.services-head h2 { margin: 0; max-width: 16ch; }
-.services-head p { max-width: 38ch; margin: 0; color: var(--ink-soft); }
+.services-head h2 { margin: 0; max-width: 20ch; }
+.services-head p { max-width: 34ch; margin: 0; color: var(--ink); font-family: var(--font-display); font-size: var(--step-1); line-height: 1.4; }
 
 .feature {
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -267,11 +268,6 @@ em { font-style: italic; }
 .feature .num, .service .num { font-family: var(--font-display); font-size: var(--step-1); color: var(--blue); margin: 0 0 0.75rem; }
 .feature h3 { font-size: var(--step-3); color: var(--blue-ink); }
 .feature h3 small { display: block; font-size: 0.45em; font-style: italic; font-weight: 400; color: var(--blue); margin-top: 0.4rem; letter-spacing: 0; }
-.facts { list-style: none; margin: 0; padding: 0; align-self: center; }
-.facts li { padding: 1rem 0; border-top: 1px solid color-mix(in oklab, var(--blue) 25%, transparent); }
-.facts li:last-child { border-bottom: 1px solid color-mix(in oklab, var(--blue) 25%, transparent); }
-.facts strong { display: block; font-family: var(--font-display); font-size: var(--step-2); font-weight: 500; color: var(--blue); line-height: 1.1; }
-.facts span { font-size: var(--step--1); }
 
 .service-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(2rem, 5vw, 4rem); margin-top: clamp(2.5rem, 5vw, 4rem); }
 .service { padding-top: 1.75rem; border-top: 2px solid var(--ink); }
@@ -313,10 +309,6 @@ em { font-style: italic; }
 .channel .icon svg { width: 1.4rem; height: 1.4rem; }
 .channel small { display: block; font-size: var(--step--1); color: var(--ink-soft); }
 .channel strong { display: block; font-size: var(--step-1); font-weight: 700; line-height: 1.25; word-break: break-word; }
-.hours { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in oklab, var(--on-blue) 30%, transparent); font-size: var(--step--1); }
-.hours dl { margin: 0.5rem 0 0; display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 1.5rem; }
-.hours dt { font-weight: 700; }
-.hours dd { margin: 0; font-family: var(--font-display); font-size: 1.1em; line-height: 1.35; }
 
 @media (max-width: 52rem) {
   .contact .wrap { grid-template-columns: 1fr; }
@@ -394,6 +386,83 @@ em { font-style: italic; }
   .site-footer .wrap { grid-template-columns: 1fr; }
   .footer-links { text-align: left; }
 }
+
+/* Sfondo a onde, fisso dietro tutto il sito */
+body { position: relative; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../img/sfondo-onde.webp") right bottom / cover no-repeat;
+  opacity: 0.7;
+}
+
+/* Zampine decorative, chiarissime */
+.has-paws { position: relative; isolation: isolate; overflow-x: clip; }
+.paws {
+  position: absolute; z-index: -1; pointer-events: none;
+  width: clamp(4.5rem, 8vw, 7rem); aspect-ratio: 1 / 2;
+  background: var(--blue); opacity: 0.07;
+  -webkit-mask: url("../img/zampe.svg") center / contain no-repeat;
+          mask: url("../img/zampe.svg") center / contain no-repeat;
+}
+.hero .paws, .contact .paws { background: var(--on-blue); opacity: 0.1; }
+.paws-hero { left: 44%; bottom: 1.5rem; transform: rotate(-30deg); }
+.paws-a { right: 3%; top: 2.5rem; transform: rotate(18deg); }
+.paws-b { left: 1%; top: 38%; transform: rotate(-60deg); }
+.paws-c { right: 4%; bottom: 1.5rem; transform: rotate(35deg); }
+.paws-page { right: 7%; top: 1.5rem; transform: rotate(25deg); }
+@media (max-width: 52rem) {
+  .paws-hero { left: auto; right: 4%; top: 1.5rem; bottom: auto; }
+  .paws-b { display: none; }
+}
+
+/* Home: impronte che camminano lungo la pagina e si scuriscono scorrendo */
+.has-walk { position: relative; }
+.walk { position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.step {
+  position: absolute;
+  background: var(--blue); opacity: 0.05;
+  -webkit-mask: url("../img/impronte.png") center / contain no-repeat;
+          mask: url("../img/impronte.png") center / contain no-repeat;
+  transition: opacity 900ms var(--ease-out);
+}
+.step.is-past { opacity: 0.2; }
+@media (prefers-reduced-motion: reduce) { .step { transition: none; } }
+
+/* Rapporto animale-persona, messo in risalto */
+.bond {
+  display: grid; grid-template-columns: auto 1fr; gap: 1.1rem;
+  margin: 2.25rem 0 0; padding: 1.5rem 1.6rem;
+  background: var(--blue-tint); color: var(--blue-ink);
+  border-radius: var(--radius);
+}
+.bond-icon { width: 2.6rem; height: 2.6rem; color: var(--blue); margin-top: 0.15rem; }
+.bond h3 { font-size: var(--step-1); color: var(--blue-ink); margin-bottom: 0.4rem; }
+.bond p { margin: 0 0 0.75rem; }
+.bond p:last-child { margin: 0; }
+.article .bond h3 { margin-top: 0; }
+
+/* Nota a destra del biofeedback in home */
+.feature-note {
+  align-self: center; margin: 0;
+  padding-left: clamp(1.25rem, 3vw, 2rem);
+  border-left: 2px solid color-mix(in oklab, var(--blue) 30%, transparent);
+  font-family: var(--font-display); font-size: var(--step-1); line-height: 1.35; color: var(--blue-ink);
+}
+.feature-note strong { display: block; font-size: var(--step-4); font-weight: 400; line-height: 1; color: var(--blue); margin-bottom: 0.4rem; }
+@media (max-width: 52rem) {
+  .feature-note { padding-left: 0; border-left: 0; padding-top: 1.5rem; border-top: 1px solid color-mix(in oklab, var(--blue) 25%, transparent); }
+}
+
+/* Contatti: invito a scrivere */
+.reply-note {
+  margin-top: 2rem; padding-top: 1.25rem;
+  border-top: 1px solid color-mix(in oklab, var(--on-blue) 30%, transparent);
+  font-family: var(--font-display); font-size: var(--step-1); line-height: 1.35;
+}
+
+/* Pagina Chi sono */
+.quote-inline { margin: 2.5rem 0; }
+.aside-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 999px 999px 0.75rem 0.75rem; margin-bottom: 1.25rem; }
 
 /* Utility */
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

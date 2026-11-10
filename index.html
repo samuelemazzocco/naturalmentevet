@@ -46,6 +46,7 @@
     <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35m-5.42 7.4h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5h17v11h-17zM3.5 7l8.5 6.5L20.5 7"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-heartpaw" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M11 20.2C8 18.3 3.6 14.9 2.6 11.3 1.6 7.7 3.7 4.6 7 4.6c2 0 3.6 1.1 5 2.9 1.4-1.8 3-2.9 5-2.9 3.2 0 5.2 2.8 4.5 6"/><g fill="currentColor"><ellipse cx="17.2" cy="18.6" rx="2.7" ry="2.2"/><ellipse cx="13.9" cy="15.6" rx="1" ry="1.25" transform="rotate(-25 13.9 15.6)"/><ellipse cx="15.9" cy="13.6" rx="1" ry="1.3"/><ellipse cx="18.5" cy="13.6" rx="1" ry="1.3"/><ellipse cx="20.5" cy="15.6" rx="1" ry="1.25" transform="rotate(25 20.5 15.6)"/></g></symbol>
   </svg>
   <a class="skip" href="#contenuto">Vai al contenuto</a>
   <header class="site-header">
@@ -56,7 +57,7 @@
       </a>
       <nav class="nav" id="menu" aria-label="Principale">
         <ul>
-          <li><a href="#chi-sono">Chi sono</a></li>
+          <li><a href="chi-sono/">Chi sono</a></li>
           <li><a href="biofeedback/">Biofeedback</a></li>
           <li><a href="inquinamento-elettromagnetico/">Inquinamento elettromagnetico</a></li>
           <li><a href="#contatti">Contatti</a></li>
@@ -71,13 +72,15 @@
     </div>
   </header>
 
-  <main id="contenuto">
-    <section class="hero" aria-labelledby="hero-title">
+  <main id="contenuto" class="has-walk">
+    <div class="walk" aria-hidden="true"></div>
+    <section class="hero has-paws" aria-labelledby="hero-title">
+      <span class="paws paws-hero" aria-hidden="true"></span>
       <div class="wrap">
         <div class="hero-text">
           <p class="eyebrow rise">Medicina veterinaria olistica</p>
-          <h1 id="hero-title" class="rise rise-2">L'animale <em>prima</em> della malattia.</h1>
-          <p class="hero-lead rise rise-3">Sono Graziella Viganò, medico veterinario omeopata. Da oltre trent'anni aiuto gli animali a restare in salute e ad affrontare la malattia con un metodo olistico costruito su misura.</p>
+          <h1 id="hero-title" class="rise rise-2">L’animale <em>prima</em> della malattia</h1>
+          <p class="hero-lead rise rise-3">Sono Graziella Viganò, medico veterinario omeopata. Da oltre trent’anni aiuto gli animali a restare in salute e ad affrontare la malattia con un metodo olistico costruito su misura.</p>
           <div class="hero-actions rise rise-4">
             <a class="btn btn-light" href="https://wa.me/393534615805?text=Buongiorno%2C%20vorrei%20ricevere%20informazioni." target="_blank" rel="noopener">
               <svg aria-hidden="true"><use href="#i-wa"/></svg>Chiedi informazioni
@@ -95,18 +98,27 @@
       </div>
     </section>
 
-    <section class="section" id="chi-sono" aria-labelledby="chi-sono-title">
+    <section class="section has-paws" id="chi-sono" aria-labelledby="chi-sono-title">
       <div class="wrap about">
         <div class="about-intro">
           <p class="eyebrow">Chi sono</p>
-          <h2 id="chi-sono-title">Ogni animale ha la sua storia.</h2>
-          <blockquote class="quote">Ogni paziente è una storia e un'esperienza di vita che porto nel cuore.</blockquote>
+          <h2 id="chi-sono-title">Ogni animale ha la sua storia</h2>
+          <blockquote class="quote">Ogni paziente è una storia e un’esperienza di vita che porto nel cuore.</blockquote>
         </div>
         <div>
           <div class="prose">
             <p>La passione per gli animali e per le cure naturali mi accompagna da sempre. Da qui è nato il mio metodo olistico personalizzato, per aiutare i nostri animali a mantenersi sani o ad affrontare al meglio la malattia.</p>
-            <p>Mi occupo dell'animale intero, inserito nel suo contesto familiare, sociale e ambientale, e non solo dei sintomi che manifesta. I sintomi sono il tentativo dell'organismo di ritrovare il proprio equilibrio: li analizzo, li valuto e li accompagno per guidare il paziente verso il recupero della salute.</p>
-            <p>Anche quando servono farmaci convenzionali, l'organismo si può sostenere in parallelo con la medicina integrata. Negli ultimi anni dedico particolare attenzione al rapporto tra l'animale e la persona che se ne prende cura: una relazione consapevole fa bene a entrambi.</p>
+            <p>Mi occupo dell’animale nella sua totalità, inserito nel suo contesto familiare, sociale e ambientale, e non solo dei sintomi che manifesta.</p>
+            <p>I sintomi sono il tentativo dell’organismo di ritrovare il proprio equilibrio: li analizzo, li valuto e li modulo per guidare il paziente verso il recupero della salute.</p>
+            <p>Anche quando servono farmaci convenzionali è possibile sostenere l’organismo in parallelo con la medicina integrata.</p>
+          </div>
+
+          <div class="bond">
+            <svg class="bond-icon" aria-hidden="true"><use href="#i-heartpaw"/></svg>
+            <div>
+              <h3>Il rapporto tra animale e persona</h3>
+              <p>Negli ultimi anni dedico particolare attenzione al rapporto tra l’animale e la persona che se ne prende cura. Una relazione consapevole fa bene a entrambi e permette di vivere al meglio la gioia che condividere un pezzo di vita con un animale sa dare.</p>
+            </div>
           </div>
 
           <ol class="timeline" aria-label="Percorso professionale">
@@ -116,43 +128,41 @@
             <li><span class="when">Oggi</span><p>Dopo dieci anni di studio della fisica quantistica applicata al benessere, lavoro a distanza con il biofeedback quantistico.</p></li>
           </ol>
 
-          <p class="muted" style="margin:2rem 0 0">Discipline che ho studiato e approfondito:</p>
+          <p class="muted" style="margin:2rem 0 0">Gli strumenti del mestiere che utilizzo:</p>
           <ul class="chips">
             <li>Omeopatia</li><li>Omotossicologia</li><li>Fitoterapia</li><li>Micoterapia</li><li>Floriterapia</li><li>Medicina funzionale</li><li>Alimentazione e clinica probiotica</li><li>Medicina quantistica</li>
           </ul>
+
+          <p style="margin:2.25rem 0 0"><a class="link-arrow" href="chi-sono/">Leggi la mia storia</a></p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="servizi" aria-labelledby="servizi-title" style="padding-top:0">
+    <section class="section has-paws" id="servizi" aria-labelledby="servizi-title" style="padding-top:0">
       <div class="wrap">
         <div class="services-head">
           <div>
-            <p class="eyebrow">Cosa faccio</p>
-            <h2 id="servizi-title">Tutto a distanza, dalla tua casa.</h2>
+            <p class="eyebrow">Come mi prendo cura del tuo animale</p>
+            <h2 id="servizi-title">Tutto a distanza, comodamente da casa tua</h2>
           </div>
-          <p>Il tuo animale resta nel suo ambiente, senza viaggi né attese in sala d'aspetto.</p>
+          <p>Il tuo animale resta nel suo ambiente familiare, senza lo stress di viaggi o attese in sala d’aspetto.</p>
         </div>
 
         <article class="feature">
           <div>
             <p class="num">01</p>
             <h3>Biofeedback quantistico <small>(biorisonanza)</small></h3>
-            <p>Un'indagine e un riequilibrio elettromagnetico attraverso le frequenze, per sostenere l'organismo in modo naturale e non invasivo. Lo uso in prevenzione nell'animale sano e come sostegno accanto alle terapie già in corso.</p>
+            <p>Un’indagine e un riequilibrio elettromagnetico attraverso le frequenze, per sostenere l’organismo in modo naturale e non invasivo. Lo uso in prevenzione nell’animale sano e come sostegno accanto alle terapie già in corso.</p>
             <a class="link-arrow" href="biofeedback/">Come funziona una seduta</a>
           </div>
-          <ul class="facts">
-            <li><strong>Un ciuffo di pelo</strong><span>è tutto quello che serve per la seduta a distanza</span></li>
-            <li><strong>Circa 11.000</strong><span>elementi valutati in ogni seduta</span></li>
-            <li><strong>Fino a 2 ore</strong><span>dedicate al tuo animale, ogni volta</span></li>
-          </ul>
+          <p class="feature-note"><strong>2 ore</strong> dedicate al tuo animale per un riequilibrio biofrequenziale profondo</p>
         </article>
 
         <div class="service-list">
           <article class="service">
             <p class="num">02</p>
             <h3>Inquinamento elettromagnetico</h3>
-            <p>Invisibile ai sensi e presente in ogni casa. Consulenze individuali per valutare l'esposizione del tuo animale e trovare la soluzione più adatta. Videocorso in preparazione.</p>
+            <p>Invisibile ai sensi e presente in ogni casa. Consulenze individuali per valutare l’esposizione del tuo animale e trovare la soluzione più adatta. Videocorso in preparazione.</p>
             <a class="link-arrow" href="inquinamento-elettromagnetico/">Approfondisci</a>
           </article>
           <article class="service is-soon">
@@ -164,21 +174,14 @@
       </div>
     </section>
 
-    <section class="section contact" id="contatti" aria-labelledby="contatti-title">
+    <section class="section contact has-paws" id="contatti" aria-labelledby="contatti-title">
+      <span class="paws paws-c" aria-hidden="true"></span>
       <div class="wrap">
         <div>
           <p class="eyebrow">Contatti</p>
-          <h2 id="contatti-title">Scrivi alla segreteria.</h2>
-          <p>Il numero WhatsApp e l'email sono gestiti dalla segreteria, che risponde alle richieste di informazioni e fissa gli appuntamenti. Dopo la prenotazione seguo personalmente ogni paziente.</p>
-          <div class="hours">
-            <p style="margin:0"><strong>Orari della segreteria</strong></p>
-            <dl>
-              <dt>Lunedì</dt><dd>dalle 16:30 alle 19:00</dd>
-              <dt>Martedì</dt><dd>dalle 10:00 alle 12:00</dd>
-              <dt>Giovedì</dt><dd>dalle 10:00 alle 12:00</dd>
-            </dl>
-            <p style="margin:0.75rem 0 0">Puoi scrivere a qualsiasi ora: la risposta arriva nel primo orario utile.</p>
-          </div>
+          <h2 id="contatti-title">Scrivi alla segreteria</h2>
+          <p>Il numero WhatsApp e l’email sono gestiti dalla segreteria, che risponde alle richieste di informazioni e fissa gli appuntamenti. Dopo la prenotazione seguo personalmente ogni paziente.</p>
+          <p class="reply-note">Scrivi quando vuoi: risponderemo appena possibile.</p>
         </div>
         <ul class="channels">
           <li>
@@ -203,10 +206,11 @@
       <img src="assets/img/logo-light.svg" alt="" width="52" height="52">
       <div>
         <p><strong>Dott.ssa Graziella Viganò</strong>, medico veterinario omeopata</p>
-        <p>Iscritta all'Ordine dei Medici Veterinari della Provincia di Udine, n. 435</p>
+        <p>Iscritta all’Ordine dei Medici Veterinari della Provincia di Udine, n. 435</p>
         <p>P.IVA 02031720309</p>
       </div>
       <ul class="footer-links">
+        <li><a href="chi-sono/">Chi sono</a></li>
         <li><a href="biofeedback/">Biofeedback</a></li>
         <li><a href="inquinamento-elettromagnetico/">Inquinamento elettromagnetico</a></li>
         <li><a href="privacy/">Privacy</a></li>
