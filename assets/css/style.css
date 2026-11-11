@@ -238,6 +238,7 @@ em { font-style: italic; }
   color: var(--blue);
 }
 .quote::before { content: "\201C"; display: block; font-size: 4rem; line-height: 0.6; margin-bottom: 0.4rem; }
+.quote::after { content: "\201D"; font-size: 4rem; line-height: 0; vertical-align: -0.42em; margin-left: 0.08em; }
 
 .timeline { list-style: none; margin: 3rem 0 0; padding: 0; border-top: 1px solid var(--line); }
 .timeline li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
@@ -255,7 +256,7 @@ em { font-style: italic; }
 /* Servizi */
 .services-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem 3rem; margin-bottom: 3rem; }
 .services-head h2 { margin: 0; max-width: 20ch; }
-.services-head p { max-width: 34ch; margin: 0; color: var(--ink); font-family: var(--font-display); font-size: var(--step-1); line-height: 1.4; }
+.services-head > p { max-width: 34ch; margin: 0; color: var(--ink); font-family: var(--font-display); font-size: var(--step-1); line-height: 1.4; }
 
 .feature {
   display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
